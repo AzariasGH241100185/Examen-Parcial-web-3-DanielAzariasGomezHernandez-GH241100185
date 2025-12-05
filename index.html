@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen Parcial Web 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+  <header>
+   <h1 id="site-title">🎓 Examen Parcial Web 3 - HTML5, CSS3 y Multimedia</h1>
+   <nav><a href="#inicio">🏠 Inicio</a> <a href="#gamificacion">🎮 Gamificación</a> <a href="#bases-datos">💾 Bases de Datos</a> <a href="#contacto">📧 Contacto</a>
+   </nav>
+  </header>
+  <main>
+   <section id="inicio">
+    <h2 id="welcome-title">Proyecto Web Parcial 3</h2>
+    <p id="welcome-text">Mi nombre es Daniel Azarias Gomez Hernandez y este sitio fue hecho para el Examen Parcial 3.</p>
+    <article class="video-container">
+     <figure>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/nc3_s8o8bNU?si=vTuaX3_laeMP1a98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <figcaption style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">
+       Este es un video de muestra que incorpore usando iframe
+      </figcaption>
+     </figure>
+    </article>
+    
+    <article class="multimedia-local">
+        <h3>Elementos Multimedia Obligatorios del Parcial xD</h3>
+        <p>Demostración de audio y video con etiquetas HTML5 nativas:</p>
+        
+        <figure class="video-local">
+            <video width="100%" height="auto" controls poster="assets/video_preview.jpg">
+                <source src="assets/sample_video.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <figcaption>Este es un video local de prueba, para lo que utilice el intro de una de mis series favoritas.</figcaption>
+        </figure>
+        
+        <figure class="audio-local">
+            <audio controls>
+                <source src="assets/sample_audio.mp3" type="audio/mp3">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+            <figcaption>Audio local de prueba que reproduce la cancion clasica de Super Mario de la NES.</figcaption>
+        </figure>
+    </article>
+    <p id="student-name" style="margin-top: 2rem; font-size: 1.1rem; font-weight: 600;">👤 Estudiante: [Daniel Azarias Gomez Hernandez - Carnet: GH241100185]</p>
+   </section>
+   
+   <section id="gamificacion">
+    <h2>🎮 Gamificación: Juego del Ahorcado</h2>
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">¡Demuestra tus conocimientos sobre programación web!</p>
+    <article class="game-container">
+     <h3 class="game-title"> AHORCADO - Términos de Programación</h3>
+     <div id="hangman-drawing">
+      <pre id="hangman-ascii"></pre>
+     </div>
+     <div id="word-display"></div>
+     <div id="game-status">
+      Intentos restantes: 
+      <span id="attempts">6</span>
+     </div>
+     <div class="keyboard" id="keyboard"></div>
+     <button id="new-game-btn">🔄 Nuevo Juego</button>
+    </article>
+   </section>
+   
+   <section id="bases-datos">
+    <h2> El Mundo de las Bases de Datos</h2>
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 1rem; color: white;">Infografía educativa completa sobre sistemas de gestión de bases de datos</p>
+    <article class="infografia-container">
+        <h3 style="text-align: center; color: #1e3c72; margin-bottom: 1.5rem; font-family: 'Poppins', sans-serif;">
+            Infografía de Bases de Datos
+        </h3>
+        
+        <figure>
+            <iframe 
+                src="assets/infografia_bbdd.pdf" 
+                width="100%" 
+                height="800px" 
+                style="border: none; border-radius: 10px;"
+                title="Infografía sobre Bases de Datos">
+                Tu navegador no puede mostrar el PDF. Por favor, descarga el archivo.
+            </iframe>
+            <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: #333;">
+                Este es un archivo PDF que modifique con Canva.
+            </figcaption>
+        </figure>
+        
+        <p style="margin-top: 2rem; text-align: center;">
+            <a href="assets/infografia_bbdd.pdf" target="_blank" class="download-link">
+                ⬇️ Revisar Infografía
+            </a>
+        </p>
+    </article>
+   </section>
+   
+   <section id="contacto">
+    <h2>📧 Contacto</h2>
+    <article class="contact-form">
+     <h3 style="text-align: center; color: #1e3c72; margin-bottom: 1.5rem; font-family: 'Poppins', sans-serif;">Envíame un mensaje</h3>
+     <form id="contact-form">
+      <div class="form-group"><label for="name">Nombre completo:</label> 
+       <input type="text" id="name" name="name" required="" placeholder="Tu nombre"> 
+      </div>
+      <div class="form-group"><label for="email">Correo electrónico:</label> 
+       <input type="email" id="email" name="email" required="" placeholder="tu@email.com"> 
+      </div>
+      <div class="form-group"><label for="message">Mensaje:</label> 
+       <textarea id="message" name="message" required="" placeholder="Escribe tu mensaje aquí..."></textarea> 
+      </div>
+      <button type="submit" class="submit-btn">📤 Enviar Mensaje</button>
+      <div class="success-message" id="success-message">
+       ✅ ¡Mensaje enviado con éxito! Te responderé pronto.
+      </div>
+     </form>
+    </article>
+   </section>
+  </main>
+  
+  <footer>
+   <p id="footer-text">© 2024 - Examen Parcial Web 3 - Todos los derechos reservados</p>
+   <p>Desarrollado con HTML5, CSS3 y JavaScript</p>
+   <div class="social-links"><a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">🐙</a> <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">💼</a> <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">🐦</a> <a href="mailto:tu@email.com" title="Email">📧</a>
+   </div>
+  </footer>
+  
+  <script>
+    // ==========================================
+    // LÓGICA JAVASCRIPT
+    // ==========================================
+
+    // Palabras para el juego del ahorcado
+    const words = [
+        'HTML', 'CSS', 'JAVASCRIPT', 'SEMANTICA', 'HEADER', 'FOOTER', 'SECTION',
+        'ARTICLE', 'GIT', 'GITHUB', 'FLEXBOX', 'GRID', 'METODO', 'SERVIDOR',
+        'CLIENTE', 'API', 'JSON', 'XML', 'RESPONSIVE', 'FRAMEWORK'
+    ];
+
+    // Estados del dibujo del ahorcado
+    const hangmanStages = [
+        `
+ +---+
+ |
+ |
+ |
+ |
+ |
+=========`,
+        `
+ +---+
+ |   O
+ |
+ |
+ |
+ |
+=========`,
+        `
+ +---+
+ |   O
+ |   |
+ |
+ |
+ |
+=========`,
+        `
+ +---+
+ |   O
+ |  /|
+ |
+ |
+ |
+=========`,
+        `
+ +---+
+ |   O
+ |  /|\\
+ |
+ |
+ |
+=========`,
+        `
+ +---+
+ |   O
+ |  /|\\
+ |  /
+ |
+ |
+=========`,
+        `
+ +---+
+ |   O
+ |  /|\\
+ |  / \\
+ |
+ |
+=========`,
+    ];
+
+    // Variables del juego
+    let currentWord = '';
+    let guessedLetters = [];
+    let remainingAttempts = 6;
+    let gameOver = false;
+
+    // Elementos del DOM
+    const wordDisplay = document.getElementById('word-display');
+    const hangmanDrawing = document.getElementById('hangman-ascii');
+    const keyboard = document.getElementById('keyboard');
+    const attemptsSpan = document.getElementById('attempts');
+    const gameStatus = document.getElementById('game-status');
+    const newGameBtn = document.getElementById('new-game-btn');
+
+    // Función para inicializar el juego
+    function initGame() {
+        // Seleccionar palabra aleatoria
+        currentWord = words[Math.floor(Math.random() * words.length)];
+        guessedLetters = [];
+        remainingAttempts = 6;
+        gameOver = false;
+
+        // Actualizar interfaz
+        updateWordDisplay();
+        updateHangmanDrawing();
+        createKeyboard();
+        updateGameStatus();
+        gameStatus.className = ''; // Limpiar clases de estado
+    }
+
+    // Función para crear el teclado virtual
+    function createKeyboard() {
+        keyboard.innerHTML = '';
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        letters.forEach(letter => {
+            const button = document.createElement('button');
+            button.textContent = letter;
+            button.addEventListener('click', () => handleGuess(letter, button));
+            keyboard.appendChild(button);
+        });
+    }
+
+    // Función para manejar una letra adivinada
+    function handleGuess(letter, button) {
+        if (gameOver || guessedLetters.includes(letter)) return;
+
+        guessedLetters.push(letter);
+        button.disabled = true;
+
+        // Verificar si la letra está en la palabra
+        if (!currentWord.includes(letter)) {
+            remainingAttempts--;
+            updateHangmanDrawing();
+        }
+
+        updateWordDisplay();
+        checkGameStatus();
+        updateGameStatus();
+    }
+
+    // Función para actualizar la visualización de la palabra
+    function updateWordDisplay() {
+        const display = currentWord
+            .split('')
+            .map(letter => guessedLetters.includes(letter) ? letter : '_')
+            .join(' ');
+        wordDisplay.textContent = display;
+    }
+
+    // Función para actualizar el dibujo del ahorcado
+    function updateHangmanDrawing() {
+        const stage = 6 - remainingAttempts;
+        hangmanDrawing.textContent = hangmanStages[stage];
+    }
+
+    // Función para actualizar el estado del juego
+    function updateGameStatus() {
+        attemptsSpan.textContent = remainingAttempts;
+    }
+
+    // Función para verificar si el juego ha terminado
+    function checkGameStatus() {
+        const wordGuessed = currentWord.split('').every(letter => guessedLetters.includes(letter));
+
+        if (wordGuessed) {
+            gameOver = true;
+            gameStatus.innerHTML = '🎉 ¡GANASTE! ¡Felicidades!';
+            gameStatus.className = 'win';
+            disableKeyboard();
+        } else if (remainingAttempts === 0) {
+            gameOver = true;
+            gameStatus.innerHTML = '😢 ¡PERDISTE! La palabra era: <strong>' + currentWord + '</strong>';
+            gameStatus.className = 'lose';
+            disableKeyboard();
+        }
+    }
+
+    // Función para deshabilitar el teclado
+    function disableKeyboard() {
+        const buttons = keyboard.querySelectorAll('button');
+        buttons.forEach(button => button.disabled = true);
+    }
+
+    // Event listener para el botón de nuevo juego
+    newGameBtn.addEventListener('click', initGame);
+
+    // ==========================================
+    // FORMULARIO DE CONTACTO
+    // ==========================================
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Simular envío exitoso
+        successMessage.style.display = 'block';
+
+        // Resetear formulario
+        contactForm.reset();
+
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000);
+    });
+
+    // ==========================================
+    // INICIALIZACIÓN
+    // ==========================================
+
+    // Iniciar el juego cuando cargue la página
+    document.addEventListener('DOMContentLoaded', initGame);
+  </script>
+ </body>
+</html>

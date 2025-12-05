@@ -1,0 +1,505 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100%;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Header y navegación */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Contenedor principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+/* Secciones */
+section {
+    background: white;
+    margin: 2rem 0;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+/* Sección de bienvenida */
+#inicio {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#inicio h2 {
+    color: white;
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+/* NUEVOS ESTILOS PARA CUMPLIR CON <video> y <audio> */
+.multimedia-local {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Alineación del contenido */
+}
+
+.multimedia-local h3, .multimedia-local p {
+    color: white;
+    text-align: center;
+}
+
+.video-local, .audio-local {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.video-local video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+/* FIN NUEVOS ESTILOS */
+
+/* Sección de gamificación */
+#gamificacion {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+#gamificacion h2 {
+    color: white;
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+.game-container {
+    background: rgba(255,255,255,0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+.game-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #f5576c;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+#word-display {
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-family: 'Poppins', sans-serif;
+    color: #1e3c72;
+    font-weight: 600;
+}
+
+#hangman-drawing {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    min-height: 150px;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.keyboard button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.keyboard button:hover:not(:disabled) {
+    background: #667eea;
+    color: white;
+    transform: scale(1.1);
+}
+
+.keyboard button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: #e0e0e0;
+}
+
+#game-status {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+    font-weight: 500;
+}
+
+#game-status.win {
+    color: #28a745;
+    font-weight: 700;
+}
+
+#game-status.lose {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+#new-game-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+}
+
+#new-game-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Sección de infografía */
+#bases-datos {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+#bases-datos h2 {
+    color: white;
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+.infografia-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 1.5rem;
+}
+
+/* NUEVOS ESTILOS PARA EL BOTÓN DE DESCARGA */
+.download-link {
+    display: inline-block;
+    background: #1e3c72;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.download-link:hover {
+    background: #2a5298;
+}
+/* SE ELIMINARON LOS ESTILOS DE GRID ANTERIORES YA QUE AHORA ES UN IFRAME */
+
+/* Sección de contacto */
+#contacto {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+#contacto h2 {
+    color: white;
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+.contact-form {
+    background: rgba(255,255,255,0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.success-message {
+    background: #28a745;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: scale(1.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    #word-display {
+        font-size: 1.8rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .keyboard {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        gap: 0.3rem;
+    }
+
+    .keyboard button {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .video-container iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    #word-display {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .game-title {
+        font-size: 1.3rem;
+    }
+
+    .keyboard button {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
